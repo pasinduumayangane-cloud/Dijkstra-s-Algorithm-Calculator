@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="main-title">Dijkstra's Algorithm Calculator</h1>
+            <p class="subtitle">Discovering Optimal Routes Through Nodes Using Dijkstra's Method ( By Pasindu Umayangane)</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="calculator-card">
+            <!-- Left Section: Select Path -->
+            <div class="select-path-section">
+                <h2 class="section-title">Select Path</h2>
+                <!--From Node Selection-->
+                <div class="input-group">
+                    <label for="from-node">From Node</label>
+                    <div class="dropdown-container">
+                        <select id="from-node" class="node-select">
+                            <option value="">Select</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                        </select>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </div>
+                </div>
+                <!--To Node Selection-->
+                <div class="input-group">
+                    <label for="to-node">To Node</label>
+                    <div class="dropdown-container">
+                        <select id="to-node" class="node-select">
+                            <option value="">Select</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                        </select>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </div>
+                </div>
+                <!--Calculate and Clear Button-->
+                <div class="button-group">
+                    <button class="btn btn-clear" onclick="clearSelection()">Clear</button>
+                    <button class="btn btn-calculate" onclick="calculatePath()">
+                        Calculate
+                        <i class="fas fa-calculator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!--  Result  View Section-->
+            <div class="result-section">
+                <h2 class="section-title">Result</h2>
+                <div class="result-display">
+                    <div id="path-result" class="path-result">
+                        <p>Select nodes and click Calculate to see the result</p>
+                    </div>
+                    <div id="distance-result" class="distance-result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
