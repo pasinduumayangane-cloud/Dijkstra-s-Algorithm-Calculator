@@ -1,3 +1,8 @@
+Project Running Instructions:-
+1)Run index.html file in your Chrome browser. 
+2)The Internet requires your device
+3) Only Responsive for desktop and mobile. 
+
 Objective:
 Recreate the provided Figma design using only HTML and CSS (optionally with JavaScript,
 if required for interactions).
