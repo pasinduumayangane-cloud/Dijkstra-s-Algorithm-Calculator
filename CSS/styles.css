@@ -1,0 +1,284 @@
+/*-------- Reset and Base Styles --------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 100%);
+    min-height: 100vh;
+}
+
+/*-------- Header Styles --------*/
+.header {
+    background: #1e3a8a;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/*-------- Main Content --------*/
+.main-content {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
+}
+
+/*-------- Calculator Card --------*/
+.calculator-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    position: relative;
+    top: -50px;
+}
+
+/*-------- Section Titles --------*/
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/*-------- Input Groups --------*/
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/*-------- Dropdown Container --------*/
+.dropdown-container {
+    position: relative;
+}
+
+.node-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    color: #374151;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease;
+}
+
+.node-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+/*-------- Button Group --------*/
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.btn-clear {
+    background: white;
+    color: #f97316;
+    border: 2px solid #f97316;
+}
+
+.btn-clear:hover {
+    background: #f97316;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.btn-calculate {
+    background: #f97316;
+    color: white;
+}
+
+.btn-calculate:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/*-------- Result Section --------*/
+.result-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-display {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 1.5rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.path-result {
+    margin-bottom: 1rem;
+}
+
+.path-result p {
+    color: #6b7280;
+    font-style: italic;
+    text-align: center;
+}
+
+.distance-result {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    text-align: center;
+}
+
+/*-------- Responsive Design --------*/
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .calculator-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        margin: 0 1rem;
+        top: -30px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.75rem;
+    }
+    
+    .calculator-card {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .node-select {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for card appearance */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator-card {
+    animation: slideUp 0.6s ease-out;
+}
+
+/* Hover effects for interactive elements */
+.node-select:hover {
+    border-color: #d1d5db;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
